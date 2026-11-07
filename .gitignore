@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# Secrets (use .env.example instead)
+.env
+
+# Your private chat history
+client/data/
+*.db
+*.db-wal
+*.db-shm
+
+# Logs and system files
+*.log
+.DS_Store

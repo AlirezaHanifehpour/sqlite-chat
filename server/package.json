@@ -1,0 +1,20 @@
+{
+  "name": "sqlite-chat-server",
+  "version": "1.0.0",
+  "description": "Relay server for Local to WebSocket. Checks the password and passes messages between clients.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "hash-password": "node scripts/hash-password.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "argon2": "^0.45.2",
+    "dotenv": "^18.0.9",
+    "package.json": "^2.0.1",
+    "socket.io": "^4.8.4"
+  }
+}

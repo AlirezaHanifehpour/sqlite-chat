@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLite Chat</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="base-container">
+        <main class="container">
+
+            <header class="chat-header">
+                <div class="chat-info">
+                    <div class="chat-avatar">L</div>
+                    <div>
+                        <h3>SQLite Chat</h3>
+                        <div class="chat-status">
+                            <i class="status-dot" id="statusDot"></i>
+                            <span id="statusText">Connecting...</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="logout-btn" id="logoutBtn">Log out</button>
+            </header>
+
+            <section class="chat-content" id="chatContent">
+                <ul class="message-list" id="messageList"></ul>
+            </section>
+
+            <p class="notice hidden" id="notice"></p>
+
+            <form class="chat-input" id="messageForm">
+                <input type="text" id="message"
+                    placeholder="Write a message..."
+                    dir="auto"
+                    maxlength="2000"
+                    autocomplete="off"
+                    aria-label="Message">
+                <button type="submit" class="send-btn" aria-label="Send">
+                    ➤
+                </button>
+            </form>
+
+            <div class="modal" id="loginModal">
+                <div class="modal-dialog">
+                    <h3>Join the chat</h3>
+                    <p class="modal-text">Enter your name and the server password.</p>
+                    <form class="login-form" id="loginForm">
+                        <input type="text" id="nameInput"
+                            placeholder="Your name"
+                            maxlength="32"
+                            autocomplete="off"
+                            aria-label="Your name">
+                        <input type="password" id="passwordInput"
+                            placeholder="Server password"
+                            autocomplete="off"
+                            aria-label="Server password">
+                        <p class="login-error hidden" id="loginError"></p>
+                        <button type="submit" class="name-btn" id="loginBtn">
+                            Join
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+
+</body>
+</html>
